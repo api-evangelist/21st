@@ -1,0 +1,25 @@
+generated: '2026-07-17'
+method: searched
+source: https://21st.dev/magic/console + https://github.com/21st-dev/magic-mcp + https://github.com/21st-dev/claude-code-plugin
+note: >-
+  21st has no public REST OpenAPI; authentication is documented across the Magic console,
+  the Magic MCP server and the remote hosted MCP. A single API key minted in the console
+  authenticates the CLI, the local stdio MCP server and the remote HTTP MCP server. The
+  remote server transmits the key as the x-api-key request header; the local server and CLI
+  read it from the API_KEY_21ST environment variable / --api-key flag.
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  header_name: x-api-key
+  env_var: API_KEY_21ST
+  oauth2_flows: []
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  parameter_name: x-api-key
+  provisioning: https://21st.dev/magic/console
+  used_by:
+  - "@21st-dev/cli (--api-key flag)"
+  - "@21st-dev/magic local MCP server (API_KEY_21ST)"
+  - remote MCP server https://21st.dev/api/mcp (x-api-key header)
