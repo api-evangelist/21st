@@ -1,0 +1,75 @@
+generated: '2026-07-17'
+method: searched
+source: https://www.npmjs.com/org/21st-dev + https://www.npmjs.com/org/21st-sdk + https://pkg.go.dev/github.com/21st-dev/21st-sdk-go
+note: >-
+  21st publishes two families of first-party packages: the Magic / component tooling under
+  the @21st-dev npm scope (Magic MCP, CLI, private registry CLI), and the 21st Agents SDK
+  under the @21st-sdk npm scope plus a Go SDK. 21st ships no public REST OpenAPI; these are
+  the client entry points.
+packages:
+- language: javascript
+  registry: npm
+  name: "@21st-dev/magic"
+  url: https://www.npmjs.com/package/@21st-dev/magic
+  install: npx -y @21st-dev/magic@latest
+  version: 0.1.0
+  description: Magic MCP UI builder by 21st.dev — stdio MCP server that generates React UI components in Cursor/Windsurf/Cline.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-dev/cli"
+  url: https://www.npmjs.com/package/@21st-dev/cli
+  install: npx @21st-dev/cli@latest
+  version: 1.7.2
+  description: The 21st CLI — search, retrieve and install 21st.dev components from the terminal and configure the 21st MCP for your editor.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-dev/registry"
+  url: https://www.npmjs.com/package/@21st-dev/registry
+  install: npx @21st-dev/registry@latest
+  version: 0.0.9
+  description: Open-source CLI for managing private React component registries — publish, install, search and share with your team.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-sdk/agent"
+  url: https://www.npmjs.com/package/@21st-sdk/agent
+  install: npm install @21st-sdk/agent
+  description: Define AI agents and tools with full type inference for 21st Agents.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-sdk/node"
+  url: https://www.npmjs.com/package/@21st-sdk/node
+  install: npm install @21st-sdk/node
+  description: Server-side Node.js SDK for 21st Agents.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-sdk/react"
+  url: https://www.npmjs.com/package/@21st-sdk/react
+  install: npm install @21st-sdk/react
+  description: React components for 21st Agents chat UIs.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-sdk/nextjs"
+  url: https://www.npmjs.com/package/@21st-sdk/nextjs
+  install: npm install @21st-sdk/nextjs
+  description: Next.js integration for 21st Agents chat.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@21st-sdk/cli"
+  url: https://www.npmjs.com/package/@21st-sdk/cli
+  install: npm install -g @21st-sdk/cli
+  description: CLI for deploying AI agents to 21st Agents.
+  official: true
+- language: go
+  registry: pkg.go.dev
+  name: github.com/21st-dev/21st-sdk-go
+  url: https://pkg.go.dev/github.com/21st-dev/21st-sdk-go
+  install: go get github.com/21st-dev/21st-sdk-go
+  description: Go SDK for building, deploying and embedding 21st AI coding agents.
+  official: true

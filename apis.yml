@@ -1,7 +1,16 @@
 aid: 21st
 name: 21st
-description: 21st is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  21st (21st.dev) is a Y Combinator-backed company building an open, community-driven
+  registry of crafted React, Next.js and Tailwind CSS UI components, plus the tooling to
+  generate and consume them with AI. Its flagship product, Magic MCP, is an AI agent that
+  drops into Cursor, Windsurf, Cline, VS Code and Claude Code to generate production-ready
+  UI components from natural-language prompts. The platform also ships a remote hosted MCP
+  server, the @21st-dev/cli terminal client, a private component registry CLI, published
+  Agent Skills, and the @21st-sdk toolkit for building, deploying and embedding AI coding
+  agents. Founded by Serafim Korablev and Sergey Bunas, 21st lets teams bring craft and
+  taste back to digital products and build UIs that reflect their own design vision rather
+  than generic LLM output.
 url: https://raw.githubusercontent.com/api-evangelist/21st/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +18,80 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+image: https://21st.dev/opengraph-image.png
 tags:
 - Company
+- UI Components
+- React
+- Model Context Protocol
+- Developer Tools
+- AI
+- Agents
+- Design Systems
+- Frontend
+- Component Registry
 apis: []
+common:
+- type: Website
+  url: https://21st.dev
+- type: DeveloperPortal
+  url: https://21st.dev
+- type: Documentation
+  url: https://docs.21st.dev
+- type: GettingStarted
+  url: https://21st.dev/magic
+- type: Blog
+  url: https://21st.dev/blog
+- type: Pricing
+  url: https://21st.dev/pricing
+- type: SignUp
+  url: https://21st.dev/magic/console
+- type: TermsOfService
+  url: https://21st.dev/terms
+- type: PrivacyPolicy
+  url: https://21st.dev/privacy
+- type: GitHubOrganization
+  url: https://github.com/21st-dev
+- type: ChangeLog
+  url: changelog/21st-changelog.yml
+- type: MCPServer
+  url: mcp/21st-mcp.yml
+- type: Packages
+  url: packages/21st-packages.yml
+- type: SDKs
+  url: packages/21st-packages.yml
+- type: CLI
+  url: cli/21st-cli.yml
+- type: LLMsTxt
+  url: llms/21st-llms.txt
+- type: Authentication
+  url: authentication/21st-authentication.yml
+- type: DomainSecurity
+  url: security/21st-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

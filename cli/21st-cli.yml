@@ -1,0 +1,45 @@
+generated: '2026-07-17'
+method: searched
+source: https://www.npmjs.com/package/@21st-dev/cli + https://github.com/21st-dev/cli + https://github.com/21st-dev/skill
+name: 21st
+package: "@21st-dev/cli"
+install:
+- method: npx
+  command: npx @21st-dev/cli@latest
+- method: global
+  command: npm install -g @21st-dev/cli
+auth: API key from https://21st.dev/magic/console
+note: >-
+  First-party terminal client for the 21st.dev catalog. Searches, retrieves and installs
+  React/shadcn components, themes and templates; generates and iterates on UI with 21st AI;
+  publishes your own work; and configures the 21st MCP server for supported editors.
+  Command surface derived from the provider-published Agent Skills (21st-dev/skill).
+commands:
+- group: discover
+  commands:
+  - name: search
+    description: Search the catalog for components, themes and templates.
+  - name: get
+    description: Print a component's code or a theme's CSS to stdout.
+  - name: add
+    description: Install a component/theme/template into the project (e.g. add @user/slug).
+- group: generate
+  commands:
+  - name: sketch
+    description: Generate UI variants from a natural-language prompt (21st AI).
+  - name: edit
+    description: Edit a generated variant in place with a natural-language change.
+  - name: code
+    description: Pull the final code of a generated draft into the project.
+- group: publish
+  commands:
+  - name: publish
+    description: Publish a React component to a team or public library.
+  - name: publish-theme
+    description: Publish the project's shadcn/Tailwind design tokens as a shareable theme.
+  - name: unpublish
+    description: Unpublish, edit or delete a published item.
+- group: setup
+  commands:
+  - name: install
+    description: Configure the 21st MCP server for an editor (install cursor|windsurf|cline|claude --api-key).

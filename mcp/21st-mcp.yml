@@ -1,0 +1,58 @@
+generated: '2026-07-17'
+method: searched
+status: published
+source: https://github.com/21st-dev/magic-mcp + https://github.com/21st-dev/claude-code-plugin
+note: >-
+  21st ships two officially published MCP servers: a local stdio server (@21st-dev/magic,
+  "21st-magic") that generates UI components in IDEs, and a remote hosted server at
+  https://21st.dev/api/mcp (JSON-RPC over HTTP) exposing the full catalog/generation surface.
+  Both authenticate with an API key minted at https://21st.dev/magic/console; the remote
+  server reads API_KEY_21ST and sends it as the x-api-key header.
+servers:
+- name: 21st-magic
+  transport: stdio
+  package: "@21st-dev/magic"
+  command: npx -y @21st-dev/magic@latest
+  auth: API key (API_KEY_21ST) from https://21st.dev/magic/console
+  clients: [Cursor, Windsurf, Cline, VS Code, Claude Code]
+  tools:
+  - name: 21st_magic_component_builder
+    description: Generate a new production-ready React UI component from a natural-language prompt.
+    source: magic-mcp CreateUiTool
+  - name: 21st_magic_component_inspiration
+    description: Fetch UI component inspiration/examples from the 21st.dev catalog.
+    source: magic-mcp FetchUiTool
+  - name: 21st_magic_component_refiner
+    description: Refine and improve an existing UI component in place.
+    source: magic-mcp RefineUiTool
+  - name: logo_search
+    description: Search and return company logos in JSX/TSX/SVG format.
+    source: magic-mcp LogoSearchTool
+- name: 21st
+  transport: http
+  url: https://21st.dev/api/mcp
+  protocol: JSON-RPC over HTTP
+  auth: API key sent as x-api-key header (from API_KEY_21ST)
+  metering: metadata search is free; component code, generation and writes are metered
+  tool_count: 21
+  tools:
+  - name: search
+    description: Search the 21st.dev catalog of components, themes and templates (free metadata).
+  - name: get_component
+    description: Retrieve a component's code (metered).
+  - name: get_theme
+    description: Retrieve a theme's CSS/design tokens.
+  - name: generate
+    description: Generate a new UI component with 21st AI (metered).
+  - name: get_usage
+    description: Read the account's credit usage and balance.
+  - name: bookmarks
+    description: Manage bookmarks and bookmark lists.
+  - name: teams
+    description: Manage team libraries and team access.
+  - name: edit_component
+    description: Edit or delete a published component.
+  - name: edit_theme
+    description: Edit or delete a published theme.
+  - name: edit_template
+    description: Edit or delete a published template.

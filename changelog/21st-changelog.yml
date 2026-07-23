@@ -1,0 +1,44 @@
+generated: '2026-07-17'
+method: searched
+source: https://21st.dev/changelog
+scheme: dated
+note: >-
+  21st publishes a dated product changelog (no semantic version tags on the platform).
+  Recent window captured below; the live page is the source of truth.
+entries:
+- date: '2026-07-17'
+  highlights:
+  - AI credit balance now visible in the header.
+  - Credit-pack offers surfaced when generation cost exceeds available credits.
+  - Bookmarks moved to the header for easier access.
+  breaking: false
+- date: '2026-07-16'
+  highlights:
+  - Model selection for AI-generated designs — choose which models draft sketches and compare side-by-side.
+  - Similar-work discovery added in previews.
+  - Streamlined team-plan purchasing.
+  breaking: false
+- date: '2026-07-15'
+  highlights:
+  - Studio editor rebuilt on a faster, more reliable runtime.
+  - Improved file-path display, save indicators and demo management.
+  breaking: false
+- date: '2026-07-14'
+  highlights:
+  - New onboarding checklist for first-time users.
+  - Fixed component submissions failing on missing license fields (auto-defaults to MIT).
+  breaking: false
+- date: '2026-07-13'
+  highlights:
+  - Animated gradients can be turned into ASCII art.
+  - New Usage page shows exact credit spend with model and cost per generation.
+  breaking: false
+- date: '2026-07-12'
+  highlights:
+  - Quick search shows recent searches and browsable categories.
+  - Search filters now live in the address bar for shareable results.
+  breaking: false
+- date: '2026-07-11'
+  highlights:
+  - Shaders, gradients and ASCII creations become installable marketplace components when published.
+  breaking: false
