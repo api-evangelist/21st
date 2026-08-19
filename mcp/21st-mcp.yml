@@ -2,19 +2,22 @@ generated: '2026-07-17'
 method: searched
 status: published
 source: https://github.com/21st-dev/magic-mcp + https://github.com/21st-dev/claude-code-plugin
-note: >-
-  21st ships two officially published MCP servers: a local stdio server (@21st-dev/magic,
-  "21st-magic") that generates UI components in IDEs, and a remote hosted server at
-  https://21st.dev/api/mcp (JSON-RPC over HTTP) exposing the full catalog/generation surface.
-  Both authenticate with an API key minted at https://21st.dev/magic/console; the remote
-  server reads API_KEY_21ST and sends it as the x-api-key header.
+note: '21st ships two officially published MCP servers: a local stdio server (@21st-dev/magic, "21st-magic")
+  that generates UI components in IDEs, and a remote hosted server at https://21st.dev/api/mcp (JSON-RPC
+  over HTTP) exposing the full catalog/generation surface. Both authenticate with an API key minted at
+  https://21st.dev/magic/console; the remote server reads API_KEY_21ST and sends it as the x-api-key header.'
 servers:
 - name: 21st-magic
   transport: stdio
-  package: "@21st-dev/magic"
+  package: '@21st-dev/magic'
   command: npx -y @21st-dev/magic@latest
   auth: API key (API_KEY_21ST) from https://21st.dev/magic/console
-  clients: [Cursor, Windsurf, Cline, VS Code, Claude Code]
+  clients:
+  - Cursor
+  - Windsurf
+  - Cline
+  - VS Code
+  - Claude Code
   tools:
   - name: 21st_magic_component_builder
     description: Generate a new production-ready React UI component from a natural-language prompt.
@@ -56,3 +59,10 @@ servers:
     description: Edit or delete a published theme.
   - name: edit_template
     description: Edit or delete a published template.
+deployment:
+  mode: remote
+  endpoint: https://21st.dev/api/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
