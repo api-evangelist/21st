@@ -1,23 +1,55 @@
-generated: '2026-07-17'
+generated: '2026-09-19'
 method: searched
 host: https://21st.dev
-note: >-
-  Probed the standard /.well-known/ discovery surface on the primary host. No real discovery
-  documents are published: security.txt and ai-plugin.json return 404; the openid-configuration
-  and api-catalog paths 301-redirect into the app's component listing routes (not RFC 8414 /
-  OIDC / RFC 9727 documents). Absence recorded as valid data — no WellKnown catalog pointer emitted.
-documents:
-- path: /.well-known/security.txt
-  status: 404
-- path: /.well-known/openid-configuration
-  status: 301
-  redirect: https://21st.dev/@.well-known/components/openid-configuration
-  real_discovery_doc: false
-- path: /.well-known/oauth-authorization-server
-  status: 404
-- path: /.well-known/api-catalog
-  status: 301
-  redirect: https://21st.dev/@.well-known/components/api-catalog
-  real_discovery_doc: false
-- path: /.well-known/ai-plugin.json
-  status: 404
+note: 'Probed the standard /.well-known/ discovery surface on the primary host. No real discovery documents
+  are published: security.txt and ai-plugin.json return 404; the openid-configuration and api-catalog
+  paths 301-redirect into the app''s component listing routes (not RFC 8414 / OIDC / RFC 9727 documents).
+  Absence recorded as valid data — no WellKnown catalog pointer emitted.
+
+
+  MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s primary
+  hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed and
+  were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
+hosts:
+- host: https://21st.dev
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 301
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 301
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    file: 21st-21st-oauth-protected-resource.json
+    bytes: 176
+  path_echo_control: passed
+- host: https://clerk.21st.dev
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: 21st-clerk-oauth-authorization-server.json
+    bytes: 1171
+  path_echo_control: passed
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://21st.dev
+    path: /.well-known/oauth-protected-resource
+    file: 21st-21st-oauth-protected-resource.json
+  - host: https://clerk.21st.dev
+    path: /.well-known/oauth-authorization-server
+    file: 21st-clerk-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host

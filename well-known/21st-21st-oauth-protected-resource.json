@@ -1,0 +1,1 @@
+{"resource":"https://21st.dev/api/mcp","authorization_servers":["https://clerk.21st.dev"],"scopes_supported":["openid","profile","email"],"bearer_methods_supported":["header"]}
