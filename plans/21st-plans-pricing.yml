@@ -1,0 +1,52 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://21st.dev/pricing
+sources:
+- https://21st.dev/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+  managed_tier: Builder
+published: true
+note: Pricing page with quarterly/yearly toggle; prices shown as billed yearly. Comparison table lists
+  feature allowances; AI credit top-ups at +100 for $5.
+plan_count: 3
+currency: USD
+plans:
+- name: Builder
+  price_text: $6 per month billed yearly
+  price: 6
+  currency: USD
+  period: month
+  unit: per user
+  included_quota: Unlimited code & prompt copies, 29,000 icons, MCP & CLI search, unlimited component
+    installs; no monthly AI credits
+- name: Builder + AI
+  price_text: $15 per month billed yearly
+  price: 15
+  currency: USD
+  period: month
+  unit: per user
+  included_quota: 500–2,000 AI credits/mo, Design Bug Bot included, everything in Builder
+  overage: +100 for $5 (rolls over)
+- name: Team
+  price_text: $7.50 per seat / month billed yearly
+  price: 7.5
+  currency: USD
+  period: month
+  unit: per seat (2–50 seats)
+  included_quota: Centralized billing, shared collections, admin controls, private team components, optional
+    AI credits per seat; 5 free reviews per team
+  overage: 'With Team + AI: +100 for $5 (rolls over)'
+rate_limit_statements:
+- 5 free reviews
+- 5 per personal account
+- 5 per team
