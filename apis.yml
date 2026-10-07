@@ -70,6 +70,8 @@ tags_raw:
 - Component Registry
 apis: []
 common:
+- type: Plans
+  url: plans/21st-plans-pricing.yml
 - type: Website
   url: https://21st.dev
 - type: DeveloperPortal
