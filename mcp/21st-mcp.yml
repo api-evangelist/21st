@@ -66,3 +66,20 @@ deployment:
   probe: gated
   checked: '2026-08-12'
   source: catalog MCP census
+rfc9728:
+  endpoint: https://21st.dev/api/mcp
+  metadata_url: https://21st.dev/.well-known/oauth-protected-resource/api/mcp
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://21st.dev/api/mcp
+    authorization_servers:
+    - https://clerk.21st.dev
+    scopes_supported:
+    - openid
+    - profile
+    - email
+    bearer_methods_supported:
+    - header
