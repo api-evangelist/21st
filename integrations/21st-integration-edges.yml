@@ -14,7 +14,7 @@ edges:
     registered_name: dev.21st/mcp
     register_id: dev.21st/mcp
     detected_by: sweep-agent-tools.py
-    detected: '2026-10-14'
+    detected: '2026-10-15'
   mcp_registry:
     servers:
     - dev.21st/mcp
