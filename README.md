@@ -86,14 +86,14 @@ Model Context Protocol servers that expose the API to agents.
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [21St Authentication](https://apis.io/security/21st/21st-authentication/)
-- [21St Domain Security](https://apis.io/security/21st/21st-domain-security/)
+- [21st Authentication](https://apis.io/security/21st/21st-authentication/)
+- [21st Domain Security](https://apis.io/security/21st/21st-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [21St Plans Pricing](https://apis.io/plans/21st/21st-plans-pricing/)
+- [21st Plans Pricing](https://apis.io/plans/21st/21st-plans-pricing/)
 
 ## Where to find this API
 
@@ -111,18 +111,18 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 37.3** — thin · rubric 0.25.0 · scored 2026-10-23
+**Kin Score 36.6** — thin · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
 | Discoverability | 58.3 |
 | Contract quality | 0.0 |
 | Contract governance | 0.0 |
-| Operational transparency | 18.4 |
+| Operational transparency | 19.0 |
 | Developer ergonomics | 66.7 |
-| Access clarity | 76.3 |
+| Access clarity | 76.6 |
 
-**Agent readiness 30.9** — agent-ready
+**Agent readiness 31.8** — agent-ready
 
 | Agent-readiness dimension | Result |
 |---|---|
@@ -138,7 +138,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Event Surface Described | — |
 | Agent Skills | yes |
 | Well Known Catalog | — |
-| Consent Identity | — |
+| Consent Identity | signal |
 | Agent Card | — |
 | Dry Run Mode | — |
 | Delegated Identity | served (partial credit) |
@@ -147,8 +147,12 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Agentic Commerce | — |
 | Pagination Ratio | na |
 | Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | yes |
 
-**Regulatory alignment 18.2** — Horizontal (data, software, accessibility, platform)
+**Regulatory alignment 12.7** — Horizontal (data, software, accessibility, platform)
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/21st/](https://apis.io/providers/21st/).
 
